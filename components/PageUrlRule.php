@@ -52,7 +52,7 @@ class PageUrlRule extends Component implements UrlRuleInterface
     public function parseRequest($manager, $request)
     {
         $pathInfo = $request->getPathInfo();
-        if (substr($pathInfo, 0, 5) === "ical/" && $this->endsWith($pathInfo, '/base.ics')) {
+        if (str_starts_with($pathInfo, "ical/") && $this->endsWith($pathInfo, '/base.ics')) {
             $parts = explode('/', $pathInfo, 3);
             if (isset($parts[1])) {
                 $params = $request->get();
