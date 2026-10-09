@@ -576,7 +576,7 @@ class ExternalCalendarEntry extends ContentActiveRecord implements Searchable
         }
         if (
             filter_var($this->location, FILTER_VALIDATE_URL) !== false
-            && strpos($this->location, 'https://') === 0 // restrict to secure URLs (and not HTTP, SSF, FTP, etc.)
+            && str_starts_with($this->location, 'https://') // restrict to secure URLs (and not HTTP, SSF, FTP, etc.)
         ) {
             return Link::asLink($this->location, $this->location)->blank();
         }
