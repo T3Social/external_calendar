@@ -4,6 +4,7 @@ Changelog
 1.6.5 (Unreleased)
 ------------------
 - Fix #110: Entries synced into wrong calendars and kept after deletion; Calendar delete requires POST; CalDAV permission checks; Legacy export and entry view errors
+- Enh: Automated code refactoring for HumHub 1.18 using Rector
 
 1.6.4 (March 18, 2026)
 ----------------------
